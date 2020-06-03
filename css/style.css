@@ -1,0 +1,49 @@
+.panel {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.smallMan {
+    fill:black;
+}
+
+button {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+body {
+    background-color:  antiquewhite;
+}
+
+#coverpanel {
+    fill: antiquewhite;
+}
+
+.panelButton {
+    fill: #efefef;
+    stroke-width:1;
+    stroke:rgb(0,0,0);
+}
+
+.panelButtonText {
+    fill: black;
+    stroke-width:0;
+    font-weight: bold;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    padding: 8px;
+    margin-top: -20px;
+    font: 10px sans-serif;
+    background: lightcyan;
+    pointer-events: none;
+    border: 1px;
+    border-radius: 8px;
+}
