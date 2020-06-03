@@ -25,6 +25,7 @@ Ho deciso di spendere un po' di tempo in più creando una versione "avanzata" ri
 - Ho aggiunto un bottone per ricaricare la pagina al fine di riportare la situazione degli omini allo stato iniziale
 - Ho aggiunto una "sezione dati", ovvero una sezione dove è presente una sorta di rappresentazione tabellare che può essere mostrata o nascosta tramite un rettangolo riadattato a bottone.
 - La "sezione dati" mostra i valori degli omini accostandogli una legenda, i dati verranno poi riorganizzati ed evidenziati in base alla carattertistica sulla quale si vuole riordinare gli omini.
+- Ho ridondato il file .json tramite un collegamento a GitHub Gist (https://gist.githubusercontent.com/DarioDN/fd26f6b5b789e8af5ff832697aa61b6d/raw/4a4979875531375eae7809018733a2f118f823d6/smallMenDataset.json) attraverso il quale è possibile lanciare lo script senza aver bisogno di un webserver necessario a superare le protezioni del browser sul caricamento dei file locali (testato su Chrome versione 83.0.4103.61)
 
 ## Considerazioni personali 
 
