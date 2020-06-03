@@ -37,6 +37,14 @@ d3.json("data/dataset.json")
     })
     .catch(function(error) {
         console.log(error);
+        d3.json("https://gist.githubusercontent.com/DarioDN/fd26f6b5b789e8af5ff832697aa61b6d/raw/4a4979875531375eae7809018733a2f118f823d6/smallMenDataset.json")
+            .then(function(data) {
+                init(data);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+
     });
 
 /*
@@ -77,7 +85,7 @@ function init(data){
     * Evidenzia le teste di tutti gli omini al "mouseover" per mettere in evidenza su quale
     *  variabile si andrà ad ordinare gli omini.
     */
-    d3.selectAll('.head').on("mouseover",function(d) {
+    d3.selectAll('.head').on("mouseover",function() {
         d3.selectAll('.head').style("fill",mouseoverColor);
 
         div.text("Ordina per la grandezza della testa")
@@ -184,7 +192,7 @@ function init(data){
     /*
     * Funzioni per la larghezza del busto
     */
-    d3.selectAll('.body').on("mouseover",function(d) {
+    d3.selectAll('.body').on("mouseover",function() {
         d3.selectAll('.body').style("fill",mouseoverColor);
 
         div.text("Ordina per la larghezza del busto")
@@ -258,7 +266,7 @@ function init(data){
     /*
     * Funzioni per la lunghezza delle braccia
     */
-    d3.selectAll('.arm').on("mouseover",function(d) {
+    d3.selectAll('.arm').on("mouseover",function() {
         d3.selectAll('.arm').style("fill",mouseoverColor);
 
         div.text("Ordina per la lunghezza delle braccia")
@@ -332,7 +340,7 @@ function init(data){
     /*
     * Funzioni per la lunghezza delle gambe
     */
-    d3.selectAll('.leg').on("mouseover",function(d) {
+    d3.selectAll('.leg').on("mouseover",function() {
         d3.selectAll('.leg').style("fill",mouseoverColor);
 
         div.text("Ordina per la lunghezza delle gambe")
@@ -351,7 +359,6 @@ function init(data){
     });
 
     d3.selectAll('.leg').on("click",function() {
-        var y1,y2,y3,y4=0;
         data = []
         circles = d3.selectAll(".legR").selectAll("__data__")._parents;
         headsDim = []
