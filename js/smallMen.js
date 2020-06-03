@@ -31,6 +31,9 @@ d3.json("data/dataset.json")
     })
     .catch(function(error) {
         console.log(error);
+        /*
+        * Carica il file.json da GitHub Gist in caso di blocco del caricamento locale da parte del browser
+        */
         d3.json("https://gist.githubusercontent.com/DarioDN/fd26f6b5b789e8af5ff832697aa61b6d/raw/4a4979875531375eae7809018733a2f118f823d6/smallMenDataset.json")
         .then(function(data) {
             init(data);
